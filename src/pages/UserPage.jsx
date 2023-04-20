@@ -1,16 +1,16 @@
+import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Avatar from '../components/Avatar'
 import Tweets from '../components/Tweets'
 import FormularioMensaje from '../components/FormularioMensaje'
-import BotonSeguimiento from '../components/botonSeguimiento'
 import BotonBloqueamiento from '../components/BotonBloqueamiento'
+import BotonSeguimiento from '../components/BotonSeguimiento'
 import useApp from '../hooks/useApp'
 import useObtenerUsuario from '../hooks/useObtenerUsuario'
 import useObtenerTweetsPersona from '../hooks/useObtenerTweetsPersona'
 import { CakeSvg, CalendarDaysSvg, ChevronLeftSvg } from '../assets/svgs'
 import formaterFecha from '../helpers/formaterFecha'
 import UserLoader from '../components/animations/UserLoader'
-import { useEffect, useState } from 'react'
 import ModalImagen from '../components/ModalImagen'
 
 const UserPage = () => {
