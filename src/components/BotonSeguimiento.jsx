@@ -1,7 +1,6 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import useSeguimiento from '../hooks/useSeguimiento'
 import useApp from '../hooks/useApp'
-import { Link } from 'react-router-dom'
 import { LoaderSvg } from '../assets/svgs'
 
 const BotonSeguimiento = ({ id, actualizarPersona }) => {
