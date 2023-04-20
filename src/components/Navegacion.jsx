@@ -5,7 +5,7 @@ import useApp from '../hooks/useApp'
 import Indicador from './Indicador'
 import Modal from './Modal'
 import Buscador from './Buscador'
-import { ArrowLeftOnRectangleSvg, BellSvg, BookmarkSquareSvg, MessengerSvg, HomeSvg, PencilSquareSvg, PencilSvg, UserSvg, EllipsisVerticalSvg, MagnifyingGlassSvg } from '../assets/svgs'
+import { ArrowLeftOnRectangleSvg, BellSvg, BookmarkSquareSvg, MessengerSvg, HomeSvg, PencilSquareSvg, PencilSvg, UserSvg, EllipsisVerticalSvg, MagnifyingGlassSvg, LogoSvg } from '../assets/svgs'
 
 const Navegacion = () => {
   // ESTADOS
@@ -29,7 +29,7 @@ const Navegacion = () => {
     <>
       <section className={`navegacion ${pathname.includes('/conversacion/') ? 'navegacion__hidden' : ''}`}>
         <Link to='/' className='logo flex'>
-          <img src='/logo.ico' alt='Logo' />
+          <LogoSvg />
           <span>Devs</span>
         </Link>
 

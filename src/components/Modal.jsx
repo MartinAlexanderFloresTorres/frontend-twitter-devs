@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { XMarkSvg } from '../assets/svgs'
 
-const Modal = ({ fondo, centerClass, center, fondoContainer, maxWidth, height, titulo, handleClose, cabezera, cabezeraFlotante, cuerpoClass, children }) => {
+const Modal = ({ fondo, animacion, centerClass, center, fondoContainer, maxWidth, height, titulo, handleClose, cabezera, cabezeraFlotante, cuerpoClass, children }) => {
   // EFECTO ESCAPE CERRAR MODAL
   useEffect(() => {
     function closeModalOnEscape(event) {
@@ -38,7 +38,7 @@ const Modal = ({ fondo, centerClass, center, fondoContainer, maxWidth, height, t
         </div>
       )}
       <div className={centerClass} style={{ padding: cabezeraFlotante ? 20 : 0, height }}>
-        <div className='modal__container' style={{ background: fondoContainer, maxWidth, height: '100%' }}>
+        <div className='modal__container' style={{ background: fondoContainer, maxWidth, height: '100%', animation: animacion ? 'aparecer-modal 0.2s ease-in' : '' }}>
           {cabezera && !cabezeraFlotante && (
             <div className='modal__top'>
               <h2>{titulo}</h2>
@@ -66,6 +66,7 @@ Modal.defaultProps = {
   centerClass: '',
   cabezeraFlotante: false,
   center: false,
+  animacion: true,
   handleClose: () => {}
 }
 

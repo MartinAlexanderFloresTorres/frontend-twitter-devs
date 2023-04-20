@@ -1,11 +1,12 @@
+import { LogoSvg } from '../../assets/svgs'
 import Modal from '../Modal'
 
 const LoaderLazy = () => {
   return (
-    <Modal cabezera={false} cuerpoClass={'no-padding'} centerClass={'no-border'} center fondoContainer={'#000'} fondo={'#000'}>
-      <div className='flex'>
-        <img src='/logo.ico' alt='Logo' />
-        <h2>Devs</h2>
+    <Modal animacion={false} cabezera={false} cuerpoClass={'no-padding'} centerClass={'no-border'} center fondoContainer={'#000'} fondo={'#000'}>
+      <div className='flex logo'>
+        <LogoSvg />
+        <h2>DEVS</h2>
       </div>
     </Modal>
   )

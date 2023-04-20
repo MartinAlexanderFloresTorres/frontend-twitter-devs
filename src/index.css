@@ -616,16 +616,15 @@ ul {
 }
 .navegacion .logo {
   width: fit-content;
-  margin-left: 10px;
   padding: 10px;
 }
 .navegacion .logo span {
   font-weight: 800;
   text-transform: uppercase;
 }
-.navegacion .logo img {
-  width: 30px;
-  height: 30px;
+.navegacion .logo svg {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 .navegacion__center {
@@ -1829,6 +1828,7 @@ ul {
   color: var(--gris);
   margin-bottom: 20px;
   word-wrap: break-word;
+  white-space: break-spaces;
 }
 
 .usuario__informacion .calendario {
@@ -2312,7 +2312,6 @@ ul {
   margin: 0 auto;
   border: 1px solid var(--oscuro);
   border-radius: 5px;
-  animation: aparecer-modal 0.2s ease-in;
 }
 @keyframes aparecer-modal {
   0% {
