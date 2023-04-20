@@ -1,6 +1,6 @@
 import ComentarioLoader from './ComentarioLoader'
 
-const Comentariosloader = () => {
+const ComentariosLoader = () => {
   return (
     <div className='comentarios'>
       <h2 className='comentarios__titulo'>Comentarios</h2>
@@ -12,4 +12,4 @@ const Comentariosloader = () => {
   )
 }
 
-export default Comentariosloader
+export default ComentariosLoader

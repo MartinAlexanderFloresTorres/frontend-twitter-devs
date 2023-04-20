@@ -5,7 +5,7 @@ import Comentarios from '../components/Comentarios'
 import FormularioComentario from '../components/FormularioComentario'
 import useObtenerTweet from '../hooks/useObtenerTweet'
 import TweetLoader from '../components/animations/TweetLoader'
-import Comentariosloader from '../components/animations/Comentariosloader'
+import ComentariosLoader from '../components/animations/ComentariosLoader'
 import FormularioComentarioLoader from '../components/animations/FormularioComentarioLoader'
 import useObtenerComentarios from '../hooks/useObtenerComentarios'
 
@@ -42,7 +42,7 @@ const TweetPage = () => {
           <>
             <FormularioComentarioLoader />
             <div className='padding'>
-              <Comentariosloader />
+              <ComentariosLoader />
             </div>
           </>
         ) : (
