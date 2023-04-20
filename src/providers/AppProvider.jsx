@@ -36,7 +36,7 @@ const AppProvider = ({ children }) => {
   // EFFECTO DE TITULO DINAMICO
   useEffect(() => {
     // establece el título de la página con el título generado o un título predeterminado si no hay ningún título generado
-    document.querySelector('html head title').textContent = generarTitulo({ pathname }) || 'Twitter Devs '
+    document.querySelector('html head title').textContent = generarTitulo({ pathname }) || 'Social Devs '
     // SCROLL TOP 0
     window.scrollTo({ top: 0 })
   }, [pathname])

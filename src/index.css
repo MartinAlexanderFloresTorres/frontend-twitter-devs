@@ -622,7 +622,8 @@ ul {
   font-weight: 800;
   text-transform: uppercase;
 }
-.navegacion .logo svg {
+.navegacion .logo svg,
+.navegacion .logo img {
   width: 40px;
   height: 40px;
   object-fit: contain;
