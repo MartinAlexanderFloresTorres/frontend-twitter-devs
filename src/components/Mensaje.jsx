@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import formatearTiempo from '../helpers/formatearTiempo'
 import useApp from '../hooks/useApp'
-import { LoaderSvg, MessageLeftSvg, MessageRigthSvg } from '../assets/svgs'
+import { LoaderSvg, MessageLeftSvg, MessageRigthSvg, MessageVistoSvg } from '../assets/svgs'
 import ModalImagen from './ModalImagen'
 
 const Mensaje = ({ mensaje, setImageCount }) => {
@@ -28,52 +28,47 @@ const Mensaje = ({ mensaje, setImageCount }) => {
     setModalImagen(!modalImagen)
   }
 
-  if (isReceptor) {
-    return (
-      <>
-        <div className='mensaje--padding'>
-          <div className={`mensajeUser mensaje--emitente ${isEliminado ? 'eliminado' : ''}`}>
-            <div className='aff'>
-              <MessageRigthSvg />
-            </div>
-            <div className='mensaje__cuerpo'>
-              <p className='mensaje__cuerpo__texto'>{mensajeText}</p>
+  return (
+    <>
+      <div className={`mensajeUser ${isReceptor ? 'rigth' : 'left'} ${isEliminado ? 'mensajeUser--eliminado' : ''}`}>
+        <span className={`aff`}>{!isReceptor ? <MessageLeftSvg /> : <MessageRigthSvg />}</span>
+
+        {isReceptor ? (
+          <span className='sms'>
+            <span className='sms_text'>
+              {mensajeText}
               {foto && <img onClick={handleModalImagen} className='cursor-pointer' src={foto.secure_url} alt='Foto mensaje' onLoad={handleImageLoad} />}
               {foto && loadingImage && (
                 <div className='flex w-full padding'>
                   <LoaderSvg />
                 </div>
               )}
-            </div>
-            <p className='mensaje__fecha'>{formatearTiempo(updatedAt)}</p>
-          </div>
-        </div>
+            </span>
+            <span className='sms_time'>{formatearTiempo(updatedAt)}</span>
+            <span>
+              <MessageVistoSvg />
+            </span>
+          </span>
+        ) : (
+          <span className='sms'>
+            <span className='sms'>
+              <span className='sms_text'>
+                {mensajeText}
 
-        {modalImagen && <ModalImagen handleModal={handleModalImagen} url={foto.secure_url} />}
-      </>
-    )
-  }
+                {foto && <img onClick={handleModalImagen} className='cursor-pointer' src={foto.secure_url} alt='Foto mensaje' onLoad={handleImageLoad} />}
+                {foto && loadingImage && (
+                  <div className='flex w-full padding'>
+                    <LoaderSvg />
+                  </div>
+                )}
+              </span>
 
-  return (
-    <>
-      <div className='mensaje--padding'>
-        <div className={`mensajeUser mensaje--receptor ${isEliminado ? 'eliminado' : ''}`}>
-          <div className='aff'>
-            <MessageLeftSvg />
-          </div>
-          <div className='mensaje__cuerpo'>
-            <p className='mensaje__cuerpo__texto'>{mensajeText}</p>
-            {foto && <img onClick={handleModalImagen} className='cursor-pointer' src={foto.secure_url} alt='Foto mensaje' onLoad={handleImageLoad} />}
-
-            {foto && loadingImage && (
-              <div className='flex w-full padding'>
-                <LoaderSvg />
-              </div>
-            )}
-          </div>
-          <p className='mensaje__fecha'>{formatearTiempo(updatedAt)}</p>
-        </div>
+              <span className='sms_time'>{formatearTiempo(updatedAt)}</span>
+            </span>
+          </span>
+        )}
       </div>
+
       {modalImagen && <ModalImagen handleModal={handleModalImagen} url={foto.secure_url} />}
     </>
   )
