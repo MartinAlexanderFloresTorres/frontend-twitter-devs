@@ -190,8 +190,8 @@ const FormularioComentario = ({ setTweet, setComentarios }) => {
             )}
             <div className='formularioTweet--botones'>
               {!loading && (
-                <label htmlFor='foto' className='flex'>
-                  <input type='file' accept='image/*' name='foto' id='foto' onChange={handleChange} />
+                <label htmlFor='fotoComentario' className='flex'>
+                  <input type='file' accept='image/*' name='foto' id='fotoComentario' onChange={handleChange} />
                   <PhotoSvg />
                 </label>
               )}

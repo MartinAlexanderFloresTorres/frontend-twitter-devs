@@ -195,8 +195,8 @@ const FormularioComentarioEditar = ({ comentario, setComentarios, callback = () 
 
             <div className='formularioTweet--botones'>
               {!loading && (
-                <label htmlFor='fotoEditar' className='flex'>
-                  <input type='file' accept='image/*' name='foto' id='fotoEditar' onChange={handleChange} />
+                <label htmlFor='fotoEditarComentario' className='flex'>
+                  <input type='file' accept='image/*' name='foto' id='fotoEditarComentario' onChange={handleChange} />
                   <PhotoSvg />
                 </label>
               )}

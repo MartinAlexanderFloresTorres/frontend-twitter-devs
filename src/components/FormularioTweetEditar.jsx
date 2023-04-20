@@ -256,14 +256,14 @@ const FormularioTweetEditar = ({ tweet }) => {
 
             <div className={`formularioTweet--botones ${loading ? 'formularioTweet--botones-right' : ''}`}>
               {!loading && (
-                <label htmlFor='fotoEditar'>
-                  <input type='file' accept='image/*' name='foto' id='fotoEditar' onChange={handleChange} />
+                <label htmlFor='fotoTweetEditar'>
+                  <input type='file' accept='image/*' name='foto' id='fotoTweetEditar' onChange={handleChange} />
                   <PhotoSvg />
                 </label>
               )}
 
               <div className='flex'>
-                <div>
+                <div className='tweet-progreso'>
                   <div className='flex' role='progressbar' aria-valuemax='100' aria-valuemin='0'>
                     <div style={{ height: 30, width: 30 }}>
                       <svg height='100%' viewBox='0 0 30 30' width='100%' style={{ overflow: 'visible' }}>

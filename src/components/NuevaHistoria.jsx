@@ -157,7 +157,7 @@ const NuevaHistoria = ({ handleModalNuevaHistoria }) => {
       <div className={`historia__agregar ${campos.archivo.data.secure_url ? 'active' : ''}`}>
         {!campos.archivo.data.secure_url && (
           <div className='historia__agregar__file'>
-            <label htmlFor='archivo' className='historia'>
+            <label htmlFor='archivoHistoria' className='historia'>
               <div className='historia__preview'>
                 <div className='historia__preview__imagen'>
                   <PlusSvg />
@@ -165,7 +165,7 @@ const NuevaHistoria = ({ handleModalNuevaHistoria }) => {
                 <h3>Subir imagen o video</h3>
               </div>
 
-              <input type='file' accept='image/*,video/*' name='archivo' onChange={handleChange} id='archivo' />
+              <input type='file' accept='image/*,video/*' name='archivo' onChange={handleChange} id='archivoHistoria' />
             </label>
           </div>
         )}

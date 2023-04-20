@@ -2512,7 +2512,7 @@ ul {
     height: fit-content;
     color: var(--azul);
   }
-  .formularioTweet .formularioTweet--contenido .formularioTweet--botones div.flex div {
+  .formularioTweet .formularioTweet--contenido .formularioTweet--botones .tweet-progreso {
     display: none;
   }
   .formularioTweet .box-compose {

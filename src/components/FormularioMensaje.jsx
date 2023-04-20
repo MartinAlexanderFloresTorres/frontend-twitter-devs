@@ -92,8 +92,8 @@ const FormularioMensaje = ({ receptor }) => {
 
       <div className='formularioTweet--botones formularioTweet--botones--mensaje'>
         {!loading && (
-          <label htmlFor='foto' className='flex'>
-            <input type='file' accept='image/*' name='foto' id='foto' onChange={handleChange} />
+          <label htmlFor='fotoMensaje' className='flex'>
+            <input type='file' accept='image/*' name='foto' id='fotoMensaje' onChange={handleChange} />
             <PhotoSvg />
           </label>
         )}

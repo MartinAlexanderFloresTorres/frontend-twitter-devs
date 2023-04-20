@@ -240,14 +240,14 @@ const FormularioTweet = () => {
             )}
             <div className={`formularioTweet--botones ${loading ? 'formularioTweet--botones-right' : ''}`}>
               {!loading && (
-                <label htmlFor='foto' className='flex'>
-                  <input type='file' accept='image/*' name='foto' id='foto' onChange={handleChange} />
+                <label htmlFor='fotoTweet' className='flex'>
+                  <input type='file' accept='image/*' name='foto' id='fotoTweet' onChange={handleChange} />
                   <PhotoSvg />
                 </label>
               )}
 
               <div className='flex'>
-                <div>
+                <div className='tweet-progreso'>
                   <div className='flex' role='progressbar' aria-valuemax='100' aria-valuemin='0'>
                     <div style={{ height: 30, width: 30 }}>
                       <svg height='100%' viewBox='0 0 30 30' width='100%' style={{ overflow: 'visible', rotate: '-90deg' }}>
