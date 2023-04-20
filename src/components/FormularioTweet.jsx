@@ -13,7 +13,7 @@ import MencionesToJsx from './functions/MencionesToJsx'
 import getHashtags from '../helpers/getHashtags'
 import getMenciones from '../helpers/getMenciones'
 import calcularColorBarra from '../helpers/calcularColorBarra'
-import toArrayWords from '../helpers/ToArrayWords'
+import toArrayWords from '../helpers/toArrayWords'
 
 export const DEFAULT_CAMPOS = {
   descripcion: '',

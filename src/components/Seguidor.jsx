@@ -1,6 +1,6 @@
 import Avatar from './Avatar'
 import { Link } from 'react-router-dom'
-import BotonSeguimiento from './botonSeguimiento'
+import BotonSeguimiento from './BotonSeguimiento'
 import useApp from '../hooks/useApp'
 
 const Seguidor = ({ seguidor }) => {
