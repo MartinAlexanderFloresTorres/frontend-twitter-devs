@@ -116,6 +116,12 @@ ul {
 ::-webkit-scrollbar-thumb:active {
   background: var(--gris-2);
 }
+@media (max-width: 780px) {
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
 /*=============== toas ===============*/
 .Toastify__toast-body {
   user-select: none;
@@ -518,6 +524,11 @@ ul {
 .contenedor__mensajes,
 .main {
   width: 100%;
+}
+/*=============== logo ===============*/
+.logo--loading svg {
+  width: 100px;
+  height: 100px;
 }
 /*=============== alerta ===============*/
 .alerta {

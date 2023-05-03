@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify'
 import AppProvider from './providers/AppProvider'
 import Layout from './layouts/Layout'
 import CheckAuth from './middlewares/CheckAuth'
+import LoaderLazy from './components/animations/LoaderLazy'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const TweetPage = lazy(() => import('./pages/TweetPage'))
@@ -31,7 +32,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <AppProvider>
-          <Suspense fallbac={null}>
+          <Suspense fallback={<LoaderLazy />}>
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route path='/' element={<HomePage />} />
