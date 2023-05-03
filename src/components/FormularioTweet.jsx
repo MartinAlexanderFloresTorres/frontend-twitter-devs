@@ -24,7 +24,7 @@ export const DEFAULT_CAMPOS = {
 
 const MAX_CHARS = 380
 
-const FormularioTweet = () => {
+const FormularioTweet = ({ callback = () => {} }) => {
   // ESTADOS
   const [campos, setCampos] = useState(DEFAULT_CAMPOS)
   const [loading, setLoading] = useState(false)
@@ -36,7 +36,9 @@ const FormularioTweet = () => {
   // USE REF TEXTAREA
   const inputRef = useRef()
 
-  const { top, left } = inputRef.current ? getCaretCoordinates(inputRef.current, inputRef.current.selectionEnd) : { top: 0, height: 0 }
+  const { top, left } = inputRef.current
+    ? getCaretCoordinates(inputRef.current, inputRef.current.selectionEnd)
+    : { top: 0, height: 0 }
 
   const posicion = (left / inputRef.current?.offsetWidth) * left
 
@@ -120,7 +122,10 @@ const FormularioTweet = () => {
       })
 
       // GUARDAR EL CONTENIDO
-      setContenido([...HashtagsToJsx({ hashtags }), ...MencionesToJsx({ menciones: mencionesNotRepite })])
+      setContenido([
+        ...HashtagsToJsx({ hashtags }),
+        ...MencionesToJsx({ menciones: mencionesNotRepite })
+      ])
 
       // GUARDAR LOS CAMPOS
       setCampos({ ...campos, [name]: value, hashtags, menciones: mencionesNotRepite })
@@ -138,7 +143,8 @@ const FormularioTweet = () => {
 
     // VALIDACIONES
     if (!descripcion) return toast.info('La descripcion es obligatoria')
-    if (descripcion.length > MAX_CHARS) return toast.info(`La descripcion debe tener maximo ${MAX_CHARS} caracteres`)
+    if (descripcion.length > MAX_CHARS)
+      return toast.info(`La descripcion debe tener maximo ${MAX_CHARS} caracteres`)
 
     setLoading(true)
     try {
@@ -156,6 +162,7 @@ const FormularioTweet = () => {
           socket.emit('/usuario/notificaciones/emitir', notificacion)
         })
       }
+      callback()
       // REDIRECCIONAR
       navigate(`/tweet/${data.tweet._id}`)
     } catch (error) {
@@ -177,8 +184,15 @@ const FormularioTweet = () => {
 
     const existeMencion = campos.menciones.find((m) => m._id === _id)
     if (!existeMencion) {
-      setCampos({ ...campos, descripcion: newText, menciones: [...campos.menciones, { _id, usuario: user }] })
-      setContenido([...HashtagsToJsx({ hashtags: campos.hashtags }), ...MencionesToJsx({ menciones: [...campos.menciones, { _id, usuario: user }] })])
+      setCampos({
+        ...campos,
+        descripcion: newText,
+        menciones: [...campos.menciones, { _id, usuario: user }]
+      })
+      setContenido([
+        ...HashtagsToJsx({ hashtags: campos.hashtags }),
+        ...MencionesToJsx({ menciones: [...campos.menciones, { _id, usuario: user }] })
+      ])
     } else {
       setCampos({ ...campos, descripcion: newText })
     }
@@ -213,16 +227,38 @@ const FormularioTweet = () => {
         <Avatar user={user} className='formularioTweet--avatar' />
         <div className='box-compose'>
           <form onSubmit={handleSubmit}>
-            <textarea ref={inputRef} autoFocus name='descripcion' id='descripcion' value={campos.descripcion} onChange={handleChange} cols='30' rows='10' placeholder='¿Qué está pasando?'></textarea>
+            <textarea
+              ref={inputRef}
+              autoFocus
+              name='descripcion'
+              id='descripcion'
+              value={campos.descripcion}
+              onChange={handleChange}
+              cols='30'
+              rows='10'
+              placeholder={`¿Qué está pasando, ${user?.nombre.split(' ')[0]}?`}
+            ></textarea>
 
             {openAutoCompletado && (
-              <AutoCompletado right={posicion + 300 > inputRef.current?.offsetWidth ? '0px' : 'auto'} left={`${posicion + 300 > inputRef.current?.offsetWidth ? 'auto' : posicion + 'px'}`} top={`${top > 80 ? '110' : top + 26}px`} palabra={palabra} handleSeleccion={handleSeleccion} />
+              <AutoCompletado
+                right={posicion + 300 > inputRef.current?.offsetWidth ? '0px' : 'auto'}
+                left={`${
+                  posicion + 300 > inputRef.current?.offsetWidth ? 'auto' : posicion + 'px'
+                }`}
+                top={`${top > 80 ? '110' : top + 26}px`}
+                palabra={palabra}
+                handleSeleccion={handleSeleccion}
+              />
             )}
 
             {contenido.length > 0 && (
               <div className='formularioTweet--hashtags mb-10'>
                 {contenido}
-                <button type='button' onClick={handleEliminarContenido} className='btn--circle btn--circle--error'>
+                <button
+                  type='button'
+                  onClick={handleEliminarContenido}
+                  className='btn--circle btn--circle--error'
+                >
                   <XMarkSvg />
                 </button>
               </div>
@@ -238,10 +274,20 @@ const FormularioTweet = () => {
                 <img src={campos.foto.secure_url} alt='foto' />
               </div>
             )}
-            <div className={`formularioTweet--botones ${loading ? 'formularioTweet--botones-right' : ''}`}>
+            <div
+              className={`formularioTweet--botones ${
+                loading ? 'formularioTweet--botones-right' : ''
+              }`}
+            >
               {!loading && (
                 <label htmlFor='fotoTweet' className='flex'>
-                  <input type='file' accept='image/*' name='foto' id='fotoTweet' onChange={handleChange} />
+                  <input
+                    type='file'
+                    accept='image/*'
+                    name='foto'
+                    id='fotoTweet'
+                    onChange={handleChange}
+                  />
                   <PhotoSvg />
                 </label>
               )}
@@ -250,15 +296,43 @@ const FormularioTweet = () => {
                 <div className='tweet-progreso'>
                   <div className='flex' role='progressbar' aria-valuemax='100' aria-valuemin='0'>
                     <div style={{ height: 30, width: 30 }}>
-                      <svg height='100%' viewBox='0 0 30 30' width='100%' style={{ overflow: 'visible', rotate: '-90deg' }}>
+                      <svg
+                        height='100%'
+                        viewBox='0 0 30 30'
+                        width='100%'
+                        style={{ overflow: 'visible', rotate: '-90deg' }}
+                      >
                         <defs>
                           <clipPath id='0.5575620228829954'>
                             <rect height='100%' width='0' x='0'></rect>
                           </clipPath>
                         </defs>
-                        <circle cx='50%' cy='50%' fill='none' r='15' stroke='#2F3336' strokeWidth='2'></circle>
-                        <circle cx='50%' cy='50%' fill='none' r='15' stroke={calcularColorBarra(porcentajeBarra)} strokeDasharray={100} strokeDashoffset={100 - porcentajeBarra} strokeLinecap='round' strokeWidth='2'></circle>
-                        <circle cx='50%' cy='50%' clipPath='url(#0.5575620228829954)' fill='#1D9BF0' r='0'></circle>
+                        <circle
+                          cx='50%'
+                          cy='50%'
+                          fill='none'
+                          r='15'
+                          stroke='#2F3336'
+                          strokeWidth='2'
+                        ></circle>
+                        <circle
+                          cx='50%'
+                          cy='50%'
+                          fill='none'
+                          r='15'
+                          stroke={calcularColorBarra(porcentajeBarra)}
+                          strokeDasharray={100}
+                          strokeDashoffset={100 - porcentajeBarra}
+                          strokeLinecap='round'
+                          strokeWidth='2'
+                        ></circle>
+                        <circle
+                          cx='50%'
+                          cy='50%'
+                          clipPath='url(#0.5575620228829954)'
+                          fill='#1D9BF0'
+                          r='0'
+                        ></circle>
                       </svg>
                     </div>
                   </div>
@@ -267,7 +341,10 @@ const FormularioTweet = () => {
                   </div>
                 </div>
 
-                <button className={`btn flex btn--height ${loading ? 'btn--oscuro' : 'btn--primary'}`} disabled={loading || campos.descripcion.length > MAX_CHARS}>
+                <button
+                  className={`btn flex btn--height ${loading ? 'btn--oscuro' : 'btn--primary'}`}
+                  disabled={loading || campos.descripcion.length > MAX_CHARS}
+                >
                   {loading ? <LoaderSvg /> : 'Publicar'}
                 </button>
               </div>

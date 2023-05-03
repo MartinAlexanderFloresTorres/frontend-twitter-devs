@@ -4,7 +4,6 @@ import { ToastContainer } from 'react-toastify'
 import AppProvider from './providers/AppProvider'
 import Layout from './layouts/Layout'
 import CheckAuth from './middlewares/CheckAuth'
-import LoaderLazy from './components/animations/LoaderLazy'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const TweetPage = lazy(() => import('./pages/TweetPage'))
@@ -32,20 +31,32 @@ const App = () => {
     <>
       <BrowserRouter>
         <AppProvider>
-          <Suspense fallback={<LoaderLazy />}>
+          <Suspense fallbac={null}>
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/tweet/:id' element={<TweetPage />} />
                 <Route path='/tweet/new' element={<CheckAuth children={<NuevoTweetPage />} />} />
-                <Route path='/tweet/editar/:id' element={<CheckAuth children={<EditarTweetPage />} />} />
+                <Route
+                  path='/tweet/editar/:id'
+                  element={<CheckAuth children={<EditarTweetPage />} />}
+                />
                 <Route path='/user/:usuario' element={<UserPage />} />
                 <Route path='/seguidores/:usuario' element={<SeguidoresPage />} />
                 <Route path='/siguiendo/:usuario' element={<SiguiendoPage />} />
-                <Route path='/notificaciones' element={<CheckAuth children={<NotificacionesPage />} />} />
+                <Route
+                  path='/notificaciones'
+                  element={<CheckAuth children={<NotificacionesPage />} />}
+                />
                 <Route path='/mensajes' element={<CheckAuth children={<MensajesPage />} />} />
-                <Route path='/mensajes/archivados' element={<CheckAuth children={<MensajesArchivadosPage />} />} />
-                <Route path='/conversacion/:conversacionId/mensajes/:emisorId/:receptorId' element={<CheckAuth children={<SuperMensajesPage />} />} />
+                <Route
+                  path='/mensajes/archivados'
+                  element={<CheckAuth children={<MensajesArchivadosPage />} />}
+                />
+                <Route
+                  path='/conversacion/:conversacionId/mensajes/:emisorId/:receptorId'
+                  element={<CheckAuth children={<SuperMensajesPage />} />}
+                />
                 <Route path='/guardados' element={<CheckAuth children={<GuardadosPage />} />} />
                 <Route path='/busqueda' element={<BusquedadPage />} />
                 <Route path='/login' element={<LoginPage />} />
@@ -53,7 +64,10 @@ const App = () => {
                 <Route path='/confirmar/:token' element={<ConfirmarPage />} />
                 <Route path='/recuperacion' element={<RecuperacionPage />} />
                 <Route path='/recuperacion/:token' element={<NuevoPasswordPage />} />
-                <Route path='/user/editar/:usuario' element={<CheckAuth children={<EditarPerfilPage />} />} />
+                <Route
+                  path='/user/editar/:usuario'
+                  element={<CheckAuth children={<EditarPerfilPage />} />}
+                />
                 <Route path='*' element={<NotFoundPage />} />
               </Route>
             </Routes>
@@ -61,7 +75,19 @@ const App = () => {
         </AppProvider>
       </BrowserRouter>
 
-      <ToastContainer position='bottom-right' limit={6} autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick={true} rtl={false} pauseOnFocusLoss={false} draggable={false} pauseOnHover={false} theme='dark' />
+      <ToastContainer
+        position='bottom-right'
+        limit={6}
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={true}
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme='dark'
+      />
     </>
   )
 }

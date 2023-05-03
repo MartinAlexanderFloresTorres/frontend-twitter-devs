@@ -22,21 +22,41 @@ const AppProvider = ({ children }) => {
   const [modalHistoria, setModalHistoria] = useState(false)
 
   // USE OBTENER TWEETS
-  const { tweets, nextPage, hasNextPage, agregarTweet, eliminarTweet, editarTweet, loading: loadingTweets } = useObtenerTweets()
+  const {
+    tweets,
+    nextPage,
+    hasNextPage,
+    agregarTweet,
+    eliminarTweet,
+    editarTweet,
+    loading: loadingTweets
+  } = useObtenerTweets()
 
   // USE OBTENER HISTORIAS SEGUIDORES
-  const { historias, handleRecargar, loading: loadingHistorias } = useObtenerHistoriasSeguidores({ user })
+  const {
+    historias,
+    handleRecargar,
+    loading: loadingHistorias
+  } = useObtenerHistoriasSeguidores({ user })
 
   // USE LOCATION
   const { pathname } = useLocation()
 
   // USE OBTENER NOTIFICICACIONES
-  const { notificaciones, nextPageNotificacion, hasNextPageNotificacion, setNotificaciones, handleNotificacion, loading: loadingNotificacion } = useObtenerNotificaciones({ socket, user })
+  const {
+    notificaciones,
+    nextPageNotificacion,
+    hasNextPageNotificacion,
+    setNotificaciones,
+    handleNotificacion,
+    loading: loadingNotificacion
+  } = useObtenerNotificaciones({ socket, user })
 
   // EFFECTO DE TITULO DINAMICO
   useEffect(() => {
     // establece el título de la página con el título generado o un título predeterminado si no hay ningún título generado
-    document.querySelector('html head title').textContent = generarTitulo({ pathname }) || 'Social Devs '
+    document.querySelector('html head title').textContent =
+      generarTitulo({ pathname }) || 'Social Devs '
     // SCROLL TOP 0
     window.scrollTo({ top: 0 })
   }, [pathname])
@@ -62,7 +82,7 @@ const AppProvider = ({ children }) => {
       filtrarNotificacionNoLeidas(notificaciones)
     } else {
       setNotificacionesNoLeidas(0)
-      document.querySelector("html head link[rel='shortcut icon']").href = '/logo.ico'
+      document.querySelector("html head link[rel='shortcut icon']").href = '/logo.svg'
     }
   }, [notificaciones])
 
@@ -92,9 +112,9 @@ const AppProvider = ({ children }) => {
   const filtrarNotificacionNoLeidas = (notificaciones) => {
     const noLeidas = notificaciones.filter((n) => !n.visto)
     if (noLeidas.length > 0) {
-      document.querySelector("html head link[rel='shortcut icon']").href = '/logo-notificacion.ico'
+      document.querySelector("html head link[rel='shortcut icon']").href = '/notificacion.svg'
     } else {
-      document.querySelector("html head link[rel='shortcut icon']").href = '/logo.ico'
+      document.querySelector("html head link[rel='shortcut icon']").href = '/logo.svg'
     }
     setNotificacionesNoLeidas(noLeidas.length)
   }

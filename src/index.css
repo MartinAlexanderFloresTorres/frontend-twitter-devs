@@ -809,6 +809,29 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
 }
+/*=============== tweet popup ===============*/
+.tweet-popup {
+  padding: 20px 20px 0 20px;
+}
+.tweet-card {
+  padding: 12px;
+  background: var(--oscuro);
+  user-select: none;
+  border-radius: 10px;
+}
+.tweet-card-placeholder {
+  width: 100%;
+  padding: 12px;
+  background: var(--gris--oscuro);
+  color: var(--tweet-color);
+  border-radius: 12px;
+  text-align: left;
+  transition: var(--transition-3s);
+  font-size: 14px;
+}
+.tweet-card-placeholder:hover {
+  background: var(--gris-2);
+}
 /*=============== formularioTweet ===============*/
 .formularioTweet {
   padding: 20px;
@@ -981,7 +1004,12 @@ ul {
 .l-item--loader {
   width: 100%;
   height: 10px;
-  background-image: linear-gradient(to right, var(--oscuro) 0%, var(--oscuro-color) 50%, var(--oscuro) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--oscuro) 0%,
+    var(--oscuro-color) 50%,
+    var(--oscuro) 100%
+  );
   background-size: 200% 100%;
   background-position: -100% 0;
   animation: l-loader-item 1s ease-in-out infinite;

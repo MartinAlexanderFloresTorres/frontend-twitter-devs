@@ -1,15 +1,43 @@
 export const HomeSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'
+      />
     </svg>
   )
 }
 
 export const EllipsisVerticalSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z'
+      />
     </svg>
   )
 }
@@ -18,7 +46,10 @@ export const MessageRigthSvg = ({ ...props }) => {
   return (
     <svg {...props} viewBox='0 0 8 13' width='8' height='13'>
       <path opacity='.13' d='M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z'></path>
-      <path fill='currentColor' d='M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z'></path>
+      <path
+        fill='currentColor'
+        d='M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z'
+      ></path>
     </svg>
   )
 }
@@ -26,21 +57,33 @@ export const MessageRigthSvg = ({ ...props }) => {
 export const MessageLeftSvg = ({ ...props }) => {
   return (
     <svg {...props} viewBox='0 0 8 13' width='8' height='13'>
-      <path opacity='.13' fill='#0000000' d='M1.533 3.568 8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z'></path>
-      <path fill='currentColor' d='M1.533 2.568 8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z'></path>
+      <path
+        opacity='.13'
+        fill='#0000000'
+        d='M1.533 3.568 8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z'
+      ></path>
+      <path
+        fill='currentColor'
+        d='M1.533 2.568 8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z'
+      ></path>
     </svg>
   )
 }
 
 export const LogoSvg = ({ ...props }) => {
   return (
-    <svg {...props} xmlns='http://www.w3.org/2000/svg' fill='rgb(29, 155, 240)' xmlnsXlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='72' height='72' viewBox='0 0 72 72' enableBackground='new 0 0 72 72' xmlSpace='preserve'>
-      <g id='bounds'>
-        <rect opacity='0' width='30' height='30' />
-      </g>
-      <g id='icon'>
-        <path d='M67.812,16.141c-2.348,1.039-4.869,1.743-7.519,2.06c2.703-1.62,4.778-4.187,5.756-7.244c-2.529,1.5-5.33,2.592-8.313,3.176C55.349,11.591,51.948,10,48.182,10c-7.229,0-13.092,5.861-13.092,13.093c0,1.026,0.118,2.021,0.338,2.981C24.543,25.526,14.9,20.317,8.441,12.395c-1.126,1.936-1.771,4.184-1.771,6.581c0,4.542,2.312,8.551,5.824,10.898c-2.146-0.069-4.165-0.657-5.93-1.638c-0.002,0.055-0.002,0.11-0.002,0.162c0,6.345,4.513,11.638,10.504,12.84c-1.101,0.298-2.256,0.457-3.449,0.457c-0.846,0-1.667-0.078-2.465-0.231c1.667,5.2,6.499,8.986,12.23,9.09C18.9,54.066,13.253,56.16,7.122,56.16c-1.055,0-2.096-0.061-3.122-0.184c5.794,3.717,12.676,5.882,20.067,5.882c24.083,0,37.251-19.949,37.251-37.249c0-0.566-0.014-1.134-0.039-1.694C63.838,21.068,66.058,18.765,67.812,16.141z' />
-      </g>
+    <svg
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+      xmlnsXlink='http://www.w3.org/1999/xlink'
+      version='1.1'
+      id='mdi-dev-to'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='currentColor'
+    >
+      <path d='M7.73 11.93C7.73 13.65 7.71 13.76 7.5 14C7.31 14.17 7.12 14.23 6.74 14.23L6.23 14.24L6.2 11.97L6.18 9.7H6.7C7.05 9.7 7.3 9.77 7.47 9.91C7.71 10.12 7.73 10.16 7.73 11.93M22 7.5V16.5C22 17.61 21.11 18.5 20 18.5H4C2.89 18.5 2 17.61 2 16.5V7.5C2 6.39 2.89 5.5 4 5.5H20C21.11 5.5 22 6.39 22 7.5M8.93 11.73C8.9 9.89 8.88 9.74 8.64 9.34C8.24 8.66 7.79 8.5 6.28 8.5H5V15.5H6.21C7.54 15.5 8.1 15.33 8.5 14.79C8.91 14.26 9 13.81 8.93 11.73M13.12 8.5H11.64C10.15 8.5 10.14 8.5 9.93 8.78S9.7 9.21 9.7 12V14.96L9.97 15.23C10.22 15.5 10.28 15.5 11.68 15.5H13.12V14.31L12.03 14.27L10.93 14.24V12.6L11.61 12.57L12.27 12.53V11.34H10.88V9.7H13.12V8.5M19 8.56C19 8.5 18.7 8.5 18.34 8.5L17.66 8.56L17.07 10.91C16.69 12.39 16.45 13.18 16.4 13.04C16.32 12.77 15.26 8.6 15.26 8.55C15.26 8.5 14.95 8.5 14.58 8.5H13.89L14.3 10.05C14.5 10.92 14.89 12.33 15.11 13.2C15.45 14.55 15.57 14.85 15.86 15.14C16.06 15.36 16.31 15.5 16.47 15.5C16.8 15.5 17.23 15.16 17.37 14.77C17.5 14.5 19 8.69 19 8.56Z' />
     </svg>
   )
 }
@@ -58,8 +101,22 @@ export const MessageVistoSvg = ({ ...props }) => {
 
 export const EllipsisHorizontalSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z'
+      />
     </svg>
   )
 }
@@ -77,15 +134,37 @@ export const FotoSvg = ({ ...props }) => {
 
 export const ArrowsPointingOutSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15'
+      />
     </svg>
   )
 }
 
 export const SpeakerWaveSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path d='M10 3.75a.75.75 0 00-1.264-.546L4.703 7H3.167a.75.75 0 00-.7.48A6.985 6.985 0 002 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0010 16.25V3.75zM15.95 5.05a.75.75 0 00-1.06 1.061 5.5 5.5 0 010 7.778.75.75 0 001.06 1.06 7 7 0 000-9.899z' />
       <path d='M13.829 7.172a.75.75 0 00-1.061 1.06 2.5 2.5 0 010 3.536.75.75 0 001.06 1.06 4 4 0 000-5.656z' />
     </svg>
@@ -94,7 +173,15 @@ export const SpeakerWaveSvg = ({ ...props }) => {
 
 export const SpeakerXMarkSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path d='M9.547 3.062A.75.75 0 0110 3.75v12.5a.75.75 0 01-1.264.546L4.703 13H3.167a.75.75 0 01-.7-.48A6.985 6.985 0 012 10c0-.887.165-1.737.468-2.52a.75.75 0 01.7-.48h1.535l4.033-3.796a.75.75 0 01.811-.142zM13.28 7.22a.75.75 0 10-1.06 1.06L13.94 10l-1.72 1.72a.75.75 0 001.06 1.06L15 11.06l1.72 1.72a.75.75 0 101.06-1.06L16.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L15 8.94l-1.72-1.72z' />
     </svg>
   )
@@ -102,7 +189,15 @@ export const SpeakerXMarkSvg = ({ ...props }) => {
 
 export const PauseSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path d='M5.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75A.75.75 0 007.25 3h-1.5zM12.75 3a.75.75 0 00-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 00.75-.75V3.75a.75.75 0 00-.75-.75h-1.5z' />
     </svg>
   )
@@ -110,7 +205,15 @@ export const PauseSvg = ({ ...props }) => {
 
 export const PlaySvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path d='M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z' />
     </svg>
   )
@@ -118,15 +221,41 @@ export const PlaySvg = ({ ...props }) => {
 
 export const EyeSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z'
+      />
       <path strokeLinecap='round' strokeLinejoin='round' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
     </svg>
   )
 }
 export const RefreshSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} xmlns='http://www.w3.org/2000/svg' className='icon icon-tabler icon-tabler-refresh' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      xmlns='http://www.w3.org/2000/svg'
+      className='icon icon-tabler icon-tabler-refresh'
+      viewBox='0 0 24 24'
+      strokeWidth='1.5'
+      stroke='currentColor'
+      fill='none'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    >
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4' />
       <path d='M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4' />
@@ -136,7 +265,14 @@ export const RefreshSvg = ({ ...props }) => {
 
 export const PlusSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path d='M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z' />
     </svg>
   )
@@ -144,7 +280,17 @@ export const PlusSvg = ({ ...props }) => {
 
 export const PhotoSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -156,7 +302,17 @@ export const PhotoSvg = ({ ...props }) => {
 
 export const XMarkSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={2.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={2.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
     </svg>
   )
@@ -164,7 +320,17 @@ export const XMarkSvg = ({ ...props }) => {
 
 export const ChatBubbleLeftEllipsisSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -176,15 +342,37 @@ export const ChatBubbleLeftEllipsisSvg = ({ ...props }) => {
 
 export const HeartSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z'
+      />
     </svg>
   )
 }
 
 export const HeartIsSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path d='M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z' />
     </svg>
   )
@@ -192,7 +380,17 @@ export const HeartIsSvg = ({ ...props }) => {
 
 export const ShareSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -204,23 +402,59 @@ export const ShareSvg = ({ ...props }) => {
 
 export const MagnifyingGlassSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z'
+      />
     </svg>
   )
 }
 
 export const BellSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0'
+      />
     </svg>
   )
 }
 
 export const MessengerSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} aria-label='Messenger' color='rgb(245, 245, 245)' fill='rgb(245, 245, 245)' viewBox='0 0 24 24'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      aria-label='Messenger'
+      color='rgb(245, 245, 245)'
+      fill='rgb(245, 245, 245)'
+      viewBox='0 0 24 24'
+    >
       <path d='M12.003 1.131a10.487 10.487 0 0 0-10.87 10.57 10.194 10.194 0 0 0 3.412 7.771l.054 1.78a1.67 1.67 0 0 0 2.342 1.476l1.935-.872a11.767 11.767 0 0 0 3.127.416 10.488 10.488 0 0 0 10.87-10.57 10.487 10.487 0 0 0-10.87-10.57Zm5.786 9.001-2.566 3.983a1.577 1.577 0 0 1-2.278.42l-2.452-1.84a.63.63 0 0 0-.759.002l-2.556 2.049a.659.659 0 0 1-.96-.874L8.783 9.89a1.576 1.576 0 0 1 2.277-.42l2.453 1.84a.63.63 0 0 0 .758-.003l2.556-2.05a.659.659 0 0 1 .961.874Z'></path>
     </svg>
   )
@@ -228,70 +462,185 @@ export const MessengerSvg = ({ ...props }) => {
 
 export const UserSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z'
+      />
     </svg>
   )
 }
 
 export const BookmarkSquareSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9'
+      />
     </svg>
   )
 }
 
 export const BookmarkSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z'
+      />
     </svg>
   )
 }
 
 export const BookmarkIsSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path clipRule='evenodd' fillRule='evenodd' d='M10 2c-1.716 0-3.408.106-5.07.31C3.806 2.45 3 3.414 3 4.517V17.25a.75.75 0 001.075.676L10 15.082l5.925 2.844A.75.75 0 0017 17.25V4.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0010 2z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        clipRule='evenodd'
+        fillRule='evenodd'
+        d='M10 2c-1.716 0-3.408.106-5.07.31C3.806 2.45 3 3.414 3 4.517V17.25a.75.75 0 001.075.676L10 15.082l5.925 2.844A.75.75 0 0017 17.25V4.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0010 2z'
+      />
     </svg>
   )
 }
 
 export const AtSymbolSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' d='M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        d='M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25'
+      />
     </svg>
   )
 }
 
 export const ChevronLeftSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path clipRule='evenodd' fillRule='evenodd' d='M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        clipRule='evenodd'
+        fillRule='evenodd'
+        d='M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z'
+      />
     </svg>
   )
 }
 
 export const ChevronRightSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path clipRule='evenodd' fillRule='evenodd' d='M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='currentColor'
+      viewBox='0 0 20 20'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        clipRule='evenodd'
+        fillRule='evenodd'
+        d='M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z'
+      />
     </svg>
   )
 }
 
 export const ArrowLeftOnRectangleSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75'
+      />
     </svg>
   )
 }
 export const PencilSquareSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -302,15 +651,39 @@ export const PencilSquareSvg = ({ ...props }) => {
 }
 export const ArrowRightOnRectangleSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9'
+      />
     </svg>
   )
 }
 
 export const CalendarDaysSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -322,7 +695,17 @@ export const CalendarDaysSvg = ({ ...props }) => {
 
 export const CakeSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
       <path
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -334,16 +717,44 @@ export const CakeSvg = ({ ...props }) => {
 
 export const PencilSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125'
+      />
     </svg>
   )
 }
 
 export const PaperAirplaneSvg = ({ ...props }) => {
   return (
-    <svg {...props} width={30} height={30} fill='none' stroke='currentColor' strokeWidth={1.5} viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
-      <path strokeLinecap='round' strokeLinejoin='round' d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5' />
+    <svg
+      {...props}
+      width={30}
+      height={30}
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.5}
+      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      aria-hidden='true'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5'
+      />
     </svg>
   )
 }

@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+    <!--=============== preload svg ===============-->
+    <link rel="preload" href="/logo.svg" as="image" />
+
+    <!-- icono svg -->
+    <link rel="shortcut icon" href="/logo.svg" type="image/svg+xml" />
+
     <title>Social Devs</title>
     <!--=============== font ===============-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body style="min-height: 100vh; background: var(--primary-color)">
     <div id="root"></div>

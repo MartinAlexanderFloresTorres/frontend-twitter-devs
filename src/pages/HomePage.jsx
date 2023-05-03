@@ -1,5 +1,5 @@
 import Autorizacion from '../components/Autorizacion'
-import FormularioTweet from '../components/FormularioTweet'
+import TweetCard from '../components/TweetCard'
 import Historias from '../components/Historias'
 import Tweets from '../components/Tweets'
 import FormularioTweetLoader from '../components/animations/FormularioTweetLoader'
@@ -27,13 +27,19 @@ const HomePage = () => {
         ) : user ? (
           <>
             <Historias />
-            <FormularioTweet />
+            <TweetCard />
           </>
         ) : (
           <Autorizacion />
         )}
 
-        <Tweets tweets={tweets} nextPage={nextPage} hasNextPage={hasNextPage} actualizarTweet={editarTweet} loading={loadingTweets} />
+        <Tweets
+          tweets={tweets}
+          nextPage={nextPage}
+          hasNextPage={hasNextPage}
+          actualizarTweet={editarTweet}
+          loading={loadingTweets}
+        />
       </div>
     </section>
   )
