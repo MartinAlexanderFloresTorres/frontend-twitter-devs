@@ -50,11 +50,6 @@ const AppProvider = ({ children }) => {
 
   // USE EFFECT PARA OBTENER USUARIO
   useEffect(() => {
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
-    if (usuario) {
-      setUser(usuario);
-    }
-
     const token = localStorage.getItem('token-twitter');
     if (token) {
       obtenerUsuario({ token });
@@ -122,7 +117,6 @@ const AppProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('token-twitter');
-    localStorage.removeItem('usuario');
     socket.disconnect();
     setNotificacionesNoLeidas(0);
     setNotificaciones([]);
