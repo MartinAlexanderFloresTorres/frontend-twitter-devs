@@ -109,8 +109,6 @@ const AppProvider = ({ children }) => {
       socket.connect();
       // CONECTAR AL USUARIO
       socket.emit('/estados/usuarios/conectar', user._id);
-      // GUARDAR EL USUARIO EN LOCALSTORAGE
-      localStorage.setItem('usuario', JSON.stringify(user));
     }
   };
 
