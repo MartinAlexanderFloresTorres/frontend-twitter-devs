@@ -3,12 +3,12 @@ const share = async ({ title, text, url }, callback = () => {}) => {
     await navigator.share({
       title,
       text,
-      url
-    })
-    callback()
+      url,
+    });
+    callback();
   } else {
-    console.error('La API de compartir no es compatible con este navegador')
+    console.error('La API de compartir no es compatible con este navegador');
   }
-}
+};
 
-export default share
+export default share;
